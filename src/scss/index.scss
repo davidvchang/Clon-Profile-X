@@ -1,0 +1,15 @@
+@use './variables';
+@use './style/menu';
+@use './base/base';
+@use './base/resets';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    background: #000;
+    display: flex;
+    flex-direction: row;
+}

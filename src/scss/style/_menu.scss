@@ -1,0 +1,39 @@
+@import '../variables';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100vh;
+
+    .Nav {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 12px 20px;
+        background-color: black;
+        border: 0;
+        border-radius: 90px;
+        width: fit-content;
+        cursor: pointer;
+
+        
+
+        .iconNav {
+            color: white;
+            width: 24px;
+            height: 24px;
+        }
+
+        .textNav {
+            color: white;
+            font-size: larger;
+        }
+    }
+
+    .Nav:hover {
+        background-color: $Color-Hover;  
+        transition: all;
+        transition-duration: 0.3s;
+    }
+}
