@@ -1,22 +1,53 @@
 import React from 'react'
 import Nav from './ui/Nav'
+import FotoPerfil from '../assets/img/FotoPerfil.webp'
 
 
 function Menu() {
   return (
     <section className='container'>
-        <Nav icon={iconHome} text='Home'/>
-        <Nav icon={iconExplore} text='Explore'/>
-        <Nav icon={iconNotifications} text='Notifications'/>
-        <Nav icon={iconMessage} text='Messages'/>
-        <Nav icon={iconGrok} text='Grok'/>
-        <Nav icon={iconLists} text='Lists'/>
-        <Nav icon={iconBookmarks} text='Bookmarks'/>
-        <Nav icon={iconCommunities} text='Communities'/>
-        <Nav icon={iconPremium} text='Premium'/>
-        <Nav icon={iconProfile} text='Profile'/>
-        <Nav icon={iconMoreNav} text='More'/>
-        
+
+      <div className='LogoNavPostButton'>
+        <button className='Logo'>
+          {iconLogoX}
+        </button>
+
+        <div className='containerNav'>
+          <Nav icon={iconHome} text='Home'/>
+          <Nav icon={iconExplore} text='Explore'/>
+          <Nav icon={iconNotifications} text='Notifications'/>
+          <Nav icon={iconMessage} text='Messages'/>
+          <Nav icon={iconGrok} text='Grok'/>
+          <Nav icon={iconLists} text='Lists'/>
+          <Nav icon={iconBookmarks} text='Bookmarks'/>
+          <Nav icon={iconCommunities} text='Communities'/>
+          <Nav icon={iconPremium} text='Premium'/>
+          <Nav icon={iconProfile} text='Profile'/>
+          <Nav icon={iconMoreNav} text='More'/>
+        </div>
+
+        <button className='ButtonPost'>
+          <span>Post</span>
+        </button>  
+
+      </div>
+
+
+      <button className='buttonProfile'>
+        <div className='photoUserName'>
+          <div className='photoProfile'>
+            <img src={FotoPerfil} alt="Foto de perfil" />
+          </div>
+
+          <div className='UserName'>
+            <span className='Name'>David Valezuela</span>
+            <span className='User'>@DavidChangDev</span>
+          </div>
+        </div>
+
+        {iconMoreProfile}
+      </button>
+
     </section>
   )
 }
@@ -64,7 +95,15 @@ const iconBookmarks = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
 </svg>
 
 const iconPremium = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={26} height={26} color={"#ffffff"} fill={"none"}>
-<path d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  <path d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+</svg>
+
+const iconLogoX= <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={28} height={28} color={"#ffffff"} fill={"none"}>
+  <path d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+</svg>
+
+const iconMoreProfile = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 logoMore">
+<path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
 </svg>
 
 

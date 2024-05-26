@@ -1,38 +1,165 @@
 @import '../variables';
 
 .container{
+
     display: flex;
     flex-direction: column;
-    gap: 8px;
     height: 100vh;
+    box-sizing: border-box;
+    width: fit-content;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-right: #2F3336 solid 1px;
+    padding-right: 5px;
 
-    .Nav {
+    .LogoNavPostButton{
         display: flex;
-        flex-direction: row;
-        gap: 20px;
-        padding: 12px 20px;
-        background-color: black;
-        border: 0;
-        border-radius: 90px;
-        width: fit-content;
-        cursor: pointer;
+        flex-direction: column;
+        gap: 6px;
 
-        
-
-        .iconNav {
-            color: white;
-            width: 24px;
-            height: 24px;
+        .Logo{
+            padding: 12px;
+            margin-left: 5px;
+            background-color: black;
+            width: fit-content;
+            border: 0;
+            border-radius: 100%;
+            cursor: pointer;
         }
-
-        .textNav {
+    
+        .Logo:hover{
+            background-color: $Color-Hover;  
+            transition: all;
+            transition-duration: 0.3s;
+        }
+    
+        .containerNav{
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+    
+        .Nav {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 12px 20px;
+            background-color: black;
+            border: 0;
+            border-radius: 90px;
+            width: fit-content;
+            cursor: pointer;
+    
+            
+    
+            .iconNav {
+                color: white;
+                width: 24px;
+                height: 24px;
+            }
+    
+            .textNav {
+                color: white;
+                font-size: 18px;
+            }
+        }
+    
+        .Nav:hover {
+            background-color: $Color-Hover;  
+            transition: all;
+            transition-duration: 0.3s;
+        }
+    
+        .ButtonPost {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border: 0;
+            padding: 14px 20px;
+            border-radius: 90px;
+            cursor: pointer;
+            width: 14em;
+            font-size: 16px;
+            font-weight: bold;
             color: white;
-            font-size: 18px;
+            background-color: $Azul-Principal;
+            margin-top: 12px;
+        }
+    
+        .ButtonPost:hover {
+            background-color: #1A8CD8;
+            transition: color;
+            transition-duration: 0.3s;
         }
     }
 
-    .Nav:hover {
-        background-color: $Color-Hover;  
+    
+
+    .buttonProfile {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        border: 0;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 90px;
+        align-items: center;
+        width: 20em;
+        justify-content: space-between;
+
+        .photoUserName{
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+
+            .photoProfile{
+                min-width: 40px;
+                min-height: 40px;
+                border-radius: 100%;
+                overflow: hidden;
+                position: relative;
+    
+                img{
+                    width: 40px;
+                    height: auto;
+                    position: absolute;
+                    top: -8px;
+                    left: 0;
+                }
+            }
+    
+            .UserName {
+    
+                display: flex;
+                flex-direction: column;
+                color: white;
+                align-items: start;
+                justify-content: center;
+    
+                .Name{
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+    
+                .User{
+                    font-size: 13.5px;
+                    font-weight: 400;
+                    color: #71767B;
+                }
+            }
+        }
+
+        .logoMore{
+            width: 26px;
+            height: 26px;
+            color: white;
+        }
+
+        
+    }
+
+    .buttonProfile:hover {
+        background-color: $Color-Hover; 
         transition: all;
         transition-duration: 0.3s;
     }
