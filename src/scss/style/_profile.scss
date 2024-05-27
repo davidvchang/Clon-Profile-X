@@ -1,0 +1,249 @@
+@import '../variables';
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    border-right: #2F3336 solid 1px;
+    font-family: var(--font-Poppins);
+
+    .bottonTop {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        color: white;
+        border: 0;
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px 10px;
+
+        .iconBack {
+            color: white;
+            width: 19px;
+            height: 19px;
+            padding: 10px;
+        }
+
+        .iconBack:hover {
+            background-color: $Color-Hover;
+            border-radius: 100%;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+
+        .NamePostsNum {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+
+            .NameBottonTop {
+                font-size: 1.45em;
+                font-weight: 600;
+            }
+
+            .PostsBottonTop {
+                font-size: 0.8rem;
+                font-weight: 400;
+                color: #71767B;
+            }
+        }
+    }
+
+    .Portada {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+
+        img {
+            width: 600px;
+        }
+
+        .PhotoButtonEditProfile {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+    
+            .ProfilePhoto {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 100%;
+                overflow: hidden;
+                border: black solid 4px;
+                position: absolute;
+                bottom: -20px;
+                left: 16px;
+    
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: -26px;
+                    left: 0;
+                }
+            }
+
+            .ProfilePhoto:hover {
+                cursor: pointer;
+                filter: brightness(90%);
+                transition: all;
+                transition-duration: 0.3s;
+            }
+
+            .editProfile {
+                display: flex;
+                flex-direction: row;
+                padding: 5px 20px;
+                border-radius: 90px;
+                border: #3f4447 solid 1px;
+                background-color: black;
+                margin-right: 20px;
+                margin-top: 8px;
+                cursor: pointer;
+
+                span {
+                    color: white;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+            }
+
+            .editProfile:hover {
+                background-color: $Color-Hover;
+                transition: all;
+                transition-duration: 0.3s;
+            }
+        }
+    }
+
+    .NameUser {
+        padding-top: 30px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding-left: 20px;
+        padding-bottom: 16px;
+
+        .Name {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .User {
+            font-weight: 300;
+            color: #71767B;
+            margin-top: -4px;
+        }
+    }
+
+    .profesion {
+        color: white;
+        font-weight: 300;
+        font-size: 15px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    .UbicationInfo {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-bottom: 10px;
+
+        .Info {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            color: white;
+            font-size: 14px;
+            width: fit-content;
+            align-items: center;
+            padding-left: 20px;
+            color: #71767B;
+
+            a{
+                text-decoration: none;
+                color: $Azul-Principal;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .iconsInfo {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .FollowersFollowing {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding-left: 20px;
+        align-items: center;
+        padding-bottom: 10px;
+
+        .Follows {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+            text-decoration: none;
+            gap: 5px;
+            border: 1px solid black;
+
+            .Num {
+                color: white;
+                font-weight: 500;
+            }
+    
+            .followsText {
+                color: #71767B;
+                font-weight: 400;
+            }
+        }
+
+        .Follows:hover {
+            border-bottom: white solid 1px;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 60px;
+        justify-content: space-between;
+        border-bottom: #2F3336 solid 1px;
+
+        .Category {
+            color: white;
+            background-color: black;
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+
+            span {
+                font-size: 14px;
+                // color: #71767B;
+                color: white;
+                font-weight: 400;
+            }
+        }
+        
+        .Category:hover {
+            background-color: $Color-Hover;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+    }
+
+    
+}

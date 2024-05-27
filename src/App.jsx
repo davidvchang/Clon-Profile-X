@@ -1,4 +1,5 @@
 import Menu from "./components/Menu";
+import Profile from "./components/Profile";
 
 function App() {
   
@@ -6,6 +7,7 @@ function App() {
   return (
     <main className="main">
       <Menu/>
+      <Profile/>
     </main>
   )
 }
