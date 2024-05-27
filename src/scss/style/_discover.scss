@@ -1,0 +1,274 @@
+@import '../variables';
+
+
+.discover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+    font-family: var(--font-Poppins);
+    padding: 5px 30px;
+
+    .inputSearch {
+
+        position: relative;
+
+        input {
+            padding: 12px 60px;
+            border: 0;
+            border-radius: 90px;
+            width: 340px;
+            font-size: 15px;
+            background-color: #202327;
+            border: black 1px solid;
+
+            
+        }
+
+        input::placeholder{
+            font-weight: 400;
+            color: #c5c8cc;
+            font-family: var(--font-Poppins);
+        }
+
+        input:focus {
+            outline: none;
+            border: $Azul-Principal 1px solid;
+            color: white;
+        }
+
+        .iconSearch {
+            color: #8C8E90;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 18px;
+            top: 12px;
+        }
+    }
+
+    .YouMightLike {
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: fit-content;
+        border: #2F3336 solid 1px;
+        border-radius: 20px;
+        justify-content: center;
+        overflow: hidden;
+        
+
+        .title {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 12px 20px;
+        }
+
+        .UserSuggestion {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 16px;
+            align-items: center;
+            cursor: pointer;
+
+            .PhotoNameUser{
+                flex-direction: row;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                .photoProfile{
+                    min-width: 40px;
+                    min-height: 40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: relative;
+        
+                    img{
+                        width: 50px;
+                        height: auto;
+                        position: absolute;
+                        top: -3px;
+                        left: -5px;
+                    }
+                }
+    
+                .NameUser {
+                    display: flex;
+                    flex-direction: column;
+                    color: white;
+    
+                    .name {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+    
+                    .user {
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #71767B;
+                    }
+                }
+            }
+           
+
+            .Follow {
+                padding: 5px 20px;
+                width: fit-content;
+                height: fit-content;
+                border-radius: 90px;
+                border: 0;
+                cursor: pointer;
+                
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .UserSuggestion:hover{
+            background-color: $Color-Hover;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+
+        .ShowMore {
+            padding: 15px 12px;
+            width: 100%;
+            background-color: black;
+            border: 0;
+            flex-direction: row;
+            display: flex;
+            justify-content: start;
+            cursor: pointer;
+
+            span {
+                color: $Azul-Principal;
+                font-size: 14px;
+                font-weight: 400;
+                padding-left: 10px;
+            }
+        }
+
+        .ShowMore:hover {
+            background-color: $Color-Hover;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+    }
+
+    .WhatsHappening {
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: fit-content;
+        border: #2F3336 solid 1px;
+        border-radius: 20px;
+        justify-content: center;
+        overflow: hidden;
+
+        .titleWhatsHappening {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 12px 20px;
+        }
+
+        .News {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 7px 16px;
+            align-items: start;
+            cursor: pointer;
+
+            .NewsInfo {
+                display: flex;
+                flex-direction: column;
+
+                .category {
+                    color: #71767B;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+    
+                .titleNews {
+                    color: white;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+    
+                .numPosts {
+                    color: #71767B;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+            }
+
+            .logoMoreNews{
+                width: 26px;
+                height: 26px;
+                color: white;
+            }
+        }
+
+        .News:hover {
+            background-color: $Color-Hover;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+
+        .ShowMore {
+            padding: 15px 12px;
+            width: 100%;
+            background-color: black;
+            border: 0;
+            flex-direction: row;
+            display: flex;
+            justify-content: start;
+            cursor: pointer;
+
+            span {
+                color: $Azul-Principal;
+                font-size: 14px;
+                font-weight: 400;
+                padding-left: 10px;
+            }
+        }
+
+        .ShowMore:hover {
+            background-color: $Color-Hover;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+    }
+
+    .Footer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 340px;
+        column-gap: 16px;
+        padding-left: 20px;
+
+        a{
+            color: #71767B;
+            font-size: 12px;
+            font-weight: 300;
+            text-decoration: none;
+            border: 1px solid black;
+        }
+        a:hover{
+            border-bottom: 1px solid #71767B;
+            transition: all;
+            transition-duration: 0.3s;
+        }
+        
+        span{
+            color: #71767B;
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+}

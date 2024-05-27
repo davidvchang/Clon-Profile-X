@@ -1,3 +1,4 @@
+import Discover from "./components/Discover";
 import Menu from "./components/Menu";
 import Profile from "./components/Profile";
 
@@ -8,6 +9,7 @@ function App() {
     <main className="main">
       <Menu/>
       <Profile/>
+      <Discover/>
     </main>
   )
 }
