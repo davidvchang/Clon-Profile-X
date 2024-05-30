@@ -6,7 +6,7 @@
     flex-direction: column;
     height: 100vh;
     box-sizing: border-box;
-    width: fit-content;
+    max-width: 275px;
     justify-content: space-between;
     padding-bottom: 20px;
     border-right: #2F3336 solid 1px;
@@ -69,21 +69,32 @@
             transition: all;
             transition-duration: 0.3s;
         }
+
+        .NavMovil {
+            display: none;
+        }
     
         .ButtonPost {
             display: flex;
             flex-direction: row;
             justify-content: center;
             border: 0;
-            padding: 14px 20px;
+            padding: 14px 100px;
             border-radius: 90px;
             cursor: pointer;
-            width: 14em;
+            width: fit-content;
             font-size: 16px;
-            font-weight: bold;
-            color: white;
             background-color: $Azul-Principal;
             margin-top: 12px;
+
+            #iconPost {
+                display: none;
+            }
+
+            .textButtonPost {
+                color: white;
+                font-weight: bold;
+            }
         }
     
         .ButtonPost:hover {
@@ -101,10 +112,10 @@
         background-color: black;
         border: 0;
         padding: 8px;
+        min-width: 251px;
         cursor: pointer;
         border-radius: 90px;
         align-items: center;
-        width: 20em;
         justify-content: space-between;
 
         .photoUserName{
@@ -163,4 +174,200 @@
         transition: all;
         transition-duration: 0.3s;
     }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        align-items: end;
+
+
+        .textNav {
+            display: none;
+        }
+
+        .LogoNavPostButton {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            min-width: auto;
+
+            .Nav {
+                gap: 0px;
+                padding: 12px;
+                border-radius: 100%;
+            }
+
+            .ButtonPost {
+                border-radius: 100%;
+                padding: 14px;
+        
+                #iconPost {
+                    display: flex;
+                }
+        
+                .textButtonPost {
+                    display: none;
+                }
+            }
+        }
+    
+    
+    
+        .buttonProfile {
+            min-width: fit-content;
+            min-height: fit-content;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+
+
+            .photoUserName {
+
+                .UserName {
+                    display: none;
+                    width: 0px;
+            
+                    .Name {
+                        display: none;
+                    }
+            
+                    .User{
+                        display: none;
+                    }
+                }
+            }
+    
+    
+            .logoMore {
+                display: none;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 1124px) {
+    .container {
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1064px) {
+    .container {
+        align-items: end;
+        width: fit-content;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768) {
+    .container {
+        align-items: center;
+        width: 88px;
+    }
+}
+
+@media(max-width: 599px) {
+    .container {
+        align-items: center;
+        width: 68px;
+    }
+}
+
+@media(max-width: 500px), only screen and (max-height: 767px) and (orientation: landscape) {
+    .container {
+        display: flex;
+        position: fixed;
+        border: none;
+        z-index: 2;
+
+        .LogoNavPostButton{
+
+            .Logo {
+                display: none;
+            }
+
+            .containerNav {
+                display: none;
+            }
+
+            .Nav {
+                display: none;
+            }
+
+            .NavMovil{
+                display: flex;
+                flex-direction: row;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                justify-content: space-around;
+                z-index: 2;
+                background-color: black;
+                border-top: #2F3336 solid 1px;
+                padding: 10px 0px;
+                margin: 0;
+        
+                .Nav {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 8px;
+                    background-color: black;
+                    border: 0;
+                    border-radius: 90px;
+                    width: fit-content;
+                    cursor: pointer;
+            
+                    .iconNav {
+                        color: white;
+                        width: 24px;
+                        height: 24px;
+                    }
+            
+                    .textNav {
+                        display: none;
+                    }
+                }
+
+                .Nav:hover {
+                    background-color: $Color-Hover;  
+                    transition: all;
+                    transition-duration: 0.3s;
+                }
+            }
+
+            .ButtonPost {
+                position: fixed;
+                bottom: 70px;
+                right: 10px;
+                justify-content: center;
+                border: 0;
+                padding: 20px;
+                border-radius: 100%;
+                cursor: pointer;
+                width: fit-content;
+                background-color: $Azul-Principal;
+    
+                #iconPost {
+                    display: flex;
+                }
+    
+                .textButtonPost {
+                    display: none;
+                }
+            }
+        
+            .ButtonPost:hover {
+                background-color: #1A8CD8;
+                transition: color;
+                transition-duration: 0.3s;
+            }
+        }
+
+        .buttonProfile {
+            display: none;
+        }
+
+    }
+
 }

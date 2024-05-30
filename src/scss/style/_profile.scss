@@ -3,11 +3,12 @@
 .profile {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 598px;
+    min-width: 375px;
     height: 100vh;
     border-right: #2F3336 solid 1px;
     font-family: var(--font-Poppins);
-    overflow-x: scroll;
+    overflow-y: scroll;
 
     .bottonTop {
         display: flex;
@@ -58,9 +59,10 @@
         width: 100%;
         height: fit-content;
         position: relative;
+        z-index: 1;
 
         img {
-            width: 600px;
+            max-width: 598px;
         }
 
         .PhotoButtonEditProfile {
@@ -70,14 +72,15 @@
             justify-content: end;
     
             .ProfilePhoto {
-                width: 8rem;
-                height: 8rem;
+                max-width: 8rem;
+                max-height: 8rem;
                 border-radius: 100%;
                 overflow: hidden;
                 border: black solid 4px;
                 position: absolute;
                 bottom: -20px;
                 left: 16px;
+                z-index: 1;
     
                 img {
                     width: 100%;
@@ -248,7 +251,7 @@
     }
 
     .Publication {
-        max-width: 600px;
+        max-width: 598px;
         flex-direction: column;
         display: flex;
         padding-left: 20px;
@@ -289,6 +292,7 @@
                 overflow: hidden;
                 position: relative;
                 margin-top: 5px;
+                z-index: 1;
     
                 img{
                     width: 40px;
@@ -296,6 +300,7 @@
                     position: absolute;
                     top: -8px;
                     left: 0;
+                    z-index: 1;
                 }
             }
 
@@ -316,8 +321,8 @@
 
                     .UserNameDate {
                         display: flex;
-                        flex-direction: row;
-                        gap: 5px;
+                        flex-wrap: wrap;
+                        column-gap: 5px;
 
                         .user {
                             color: #71767B;
@@ -399,10 +404,12 @@
                         border-radius: 15px;
                         overflow: hidden;
                         position: relative;
+                        z-index: 1;
 
                         img {
                             width: 100%;
                             height: 100%;
+                            z-index: 1;
                         }
                     }
                 }
@@ -465,5 +472,76 @@
                 }
             }
         }
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 768) {
+    .profile {
+        width: auto;
+    }
+}
+
+@media (min-width: 685px) {
+
+    .profile {
+
+        .Portada {
+
+            width: 100%;
+            height: fit-content;
+            position: relative;
+    
+            img {
+                max-width: 598px;
+            }
+
+            .ProfilePhoto {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+        
+    }
+}
+
+
+@media (max-width: 685px) {
+
+    .profile {
+
+        .Portada {
+            width: 100%;
+            height: fit-content;
+            position: relative;
+    
+            img {
+                max-width: 100%;
+            }
+
+            .ProfilePhoto {
+                width: 7rem;
+                height: 7rem;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        
+        .categories {
+            width: 100%;
+            overflow-x: scroll;
+
+            .Category {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px), only screen and (max-height: 767px) and (orientation: landscape) {
+    .profile {
+        padding-bottom: 100px;
     }
 }

@@ -73,7 +73,7 @@ function Profile() {
                     NumView='74'
                     />
 
-        <Publication FotoPerfil={PhotoProfile} name='David Valenzuela' user='@DavidChangDev' date='Apr 16' 
+        <Publication FotoPerfil={PhotoProfile} name='David Valenzuela' user='@DavidChangDev' date='Apr 21' 
                     description='Estoy realizando una pagina de películas (Solo el front  End) en la cual puedes ver las películas mas populares, 
                     puedes elegir la categoría a mostrar, etc. Me estoy basando en el diseño de la pagina de cuevana, 
                     realizo esto para desarrollar mis habilidades sobre el consumo de API'
